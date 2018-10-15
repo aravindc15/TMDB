@@ -9,12 +9,13 @@ class Movie extends React.Component{
           path:'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
         }
       }
+      
   render() {
     let  data  = this.props.data;
     return (
       <figure className="grid-figure">
         <div className="grid-photo-wrap">
-          <Link to={{pathname:`/view/${data.title}`,
+          <Link to={{pathname:`/view/${this.props.data.id}`,
                      state:this.props.data }}>
             <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${data.poster_path}`} alt={data.title} className="grid-photo" />
           </Link>

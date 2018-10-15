@@ -21,7 +21,7 @@ class App extends React.Component{
     axios(option).then((response)=>{
             
            this.setState({movie_data:response.data.results});
-           console.log('During api call',this.state.movie_data)
+           console.log('During api call',response)
            console.log(this.state.movie_data)
 
     }).catch((res)=>res)
@@ -31,7 +31,7 @@ class App extends React.Component{
     
   
     render(){
-    if(!this.state.movie_data){
+    if(this.state.movie_data.length===0){
       return(
         
         <ReactLoading type="bars" color="blue" height={667} width={375}  />

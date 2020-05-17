@@ -15,7 +15,7 @@ class App extends React.Component{
   componentDidMount(){
     
     const option={
-      url:'https://api.themoviedb.org/3/movie/popular?api_key=1e2bbb1e97b4751a4945af538fa72a41',
+      url:'https://api.themoviedb.org/3/movie/popular?api_key=123',
       method:'GET'
     }
     axios(option).then((response)=>{
